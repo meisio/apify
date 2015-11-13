@@ -24,7 +24,7 @@ env:
         # travis encrypt GH_OAUTH_TOKEN=XXXXXXXXXXXXXXX
         #
         # User specific env variables
-        - secure: "OJAGMgSYqiH6CsMMJd6Hnq/ChunUkc3hPX57kmmvP3VBmk5KS/P33uNR8uo6o96JZ1EAIf/DdkRLeBpYdLqpzdJl72xFzCDJN/JzgqGMBa5tFxu9dCoxqpWg0nkapORY8Z/a0C7WaBBjvEXZAeVehl3nrqiye6gqM8EdGLTD54pFzkBFhkkoYUWVIXyYzJIN34XFWaUyFjlMuuWkwKkAY7iZA1vzpVLIK2Qb4WhVtKgAgFy8oOwSut/BozjGN9EePVDZ9hkxjPDgcAqBrihLMYSz89MXDLPQEi30czvjn7LnIQeeNBKYzytIQ/KTfkA0fg/7/CEhWzJH3JDSJsDL2hgCAYlnp/kN7ODJpRaePIf00R5MmBPheDbf0AjjV2rwL/ejOptcR9Za6+fPQOuCnfBo5V6gnWRjIYaG+e2jBnjuDjxHj9gZTVqlMoTAIOw5SY5sXh6sMGqc/CjtIMuCMwSvPJHlKoFXk4WVk3MW8csmHA9UDD0nA126CQmeFfa+MrtPaJB2Xel27lHQGcGpuYaHtrOHsJLBDsV0ykP/8tAWFVoGlnDrEq3jQuknFAcrPLUy04+b/FlPVE0sKeg8e5w0zt0YhoZ1pFPg3OgtsELRCdWRifeA2RJCh2kbeOjd7/TqqjGeaTUSDVYcqTT2K7wCQ9cbbmfP0DAWyHPkUvQ="
+        - secure: "MLM/URH+SCxaM/UIP8nCHxjwA+yKTEJRD9ZCVUlDv32R6h0W8Tv5HzoNnzS2aNBz540p8D7ZtZHFG77RqctHWTrKj4WMhwDoRUm1OBum/kK/QiD5MFSX7BhbYILTWy9JJRkSz6tcfUOXc011RpCmiCuqsc9gKEUHntUoCDW5KYtzJMz7GmeitSS9H9vLzAMGrPkf0wGenv39plCPfi4dU2k9g5yLdzKmRKv0OpGmgPojV+ubGeyAOYTcOkjtt+em1d3t0fYc9YpbmKLPxtOfmhPRPr5XSgQPO3S4S4pkCpYwhKsuTe7/682VVfeLsaE++s7mImPGYYL+xJABSmEsV8Hy+trjXKyHMC+hrDzy/N8bj4uNhsM4g6WawYt6ySkJ3HSBwl09frQzJtXzoTD87Jz3RFUs1ifP4DshQXMy88yHDyxFMfQsQatpdXvlgtE4fTHKCsDxi1cdZ59eFrQ3KfhtZM9Nhkw9F8TgSIEDWzJFi8RsCndN3enw1IEw3iZIsSkdtdH0iSSwPuQ+J4xxxE7nz3yR+oAVGoX/s1yVSZMGJSc0NEQTDw+7I4tchPMIE63tDvkhIujZ62GbwEKBK7O0N6yxHLhudMvO0kDhGRskgeDjBkwfJK2Hy60iRwQQmoECiuBNG3Rl2NFNSSfxooiymLR6mU9jnkRHf8xEvGA="
         - GH_OWNER: meisio
         - GH_PROJECT_NAME: apify
         # This .travis.yml file instructs travis-ci.org to build your master branch using `yeoman build`
