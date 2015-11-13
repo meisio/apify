@@ -2,7 +2,7 @@
   "name": "apify",
   "private": true,
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
+    "autoprefixer-core": "^5.2.0",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-concurrent": "^1.0.0",
