@@ -2,6 +2,27 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+@import "cover.scss";
+
+body {
+  font-family: Inconsolata, monospace;
+  padding: 0;
+  background: transparent;
+}
+
+a, a:focus, a:hover{
+  color: #337ab7;
+}
+
+.full{
+  background: url('../images/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -10,60 +31,167 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 768px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+.search-item{
+  h4{
+    font-size: 14px;
+    font-weight: bold;
+  }
+  h5{
+    font-size: 12px;
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+.search-form{
+  input{
+    color: #bbb;
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 1.3333333;
+    border-radius: 2px;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-bottom: 1px solid #fafafa;
+  }
+  input:focus{
+    box-shadow: none;
+  }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+  ul{
+    display: block;
+    top: auto !important;
+    left: 0px !important;
+    width: 100%;
+    margin: -2px 0px;
+    padding: 0px 15px 0px 15px;
+    text-align: default;
+    background-color: transparent;
+    border: none;
+    border: none;
+    border-radius: 0px;
+    li{
+      a{
+        color: #333333;
+        text-decoration: none;
+        outline: 0;
+        background-color: #F0F0F0;
+      }
+    }
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
 
-  p + h4 {
-    margin-top: 28px;
+.code-box{
+  .top{
+    min-height: 33px;
+    max-height: 33px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    padding: 5px;
+
+    .circle{
+      width: 16px !important;
+      height: 16px !important;
+      min-width: 16px;
+      min-height: 16px;
+      max-width: 16px;
+      max-height: 16px;
+      border-radius: 8px;
+      padding: 0px;
+      margin: 3px;
+    }
+
+    .red{
+      background-color: #FF6961;
+    }
+    .green{
+      background-color: #77DD77;
+    }
+    .blue{
+      background-color: #779ECB;
+    }
+
+    .code-box-header{
+      position: relative;
+      color: #fff;
+    }
+
+  }
+  .nav{
+    width: 100%;
+  }
+  .code{
+    width: 100%;
+    height: 100%;
+    pre{
+      background-color: #f0f0f0;
+      padding: 0px !important;
+      border: none;
+      border-radius: 0px;
+      code{
+        padding: 0px;
+      }
+    }
+  }
+
+  .code.markdown{
+    pre{
+      margin: 0px 0px 0px 20px;
+    }
+  }
+  border-top: 33px solid #343C4C;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  min-height: 480px;
+  max-height: 480px;
+
+  .api{
+    text-align: left;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    max-height: 430px;
+    .languages{
+      .list-inline{
+        margin-left: 0px;
+        border-bottom: 1px solid #636363;
+        li{
+          padding: 8px;
+          a:hover{
+            text-decoration: none;
+          }
+          a:focus{
+            text-decoration: none;
+          }
+        }
+        li:hover{
+          background-color: #dadada;
+          cursor: pointer;
+        }
+        li.active{
+          background-color: #dadada;
+        }
+      }
+      a{
+        color: #000;
+      }
+    }
+  }
+
+  .code-block{
+    padding: 8px 0px 0px 8px;
   }
 }
 

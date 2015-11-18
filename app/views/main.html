@@ -1,23 +1,43 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<script type="text/ng-template" id="template.html">
+  <a class="search-item">
+      <h4>{{match.model.name}}</h4>
+      <h5>Language: {{match.model.lang}} <span ng-if="match.model.platform">Platform: {{match.model.platform}}</span></h5>
+  </a>
+</script>
+<!-- search field -->
+<div class="row">
+  <div class="form-group col-xs-12 search-form">
+    <input  type="text"
+            class="form-control input-lg"
+            placeholder="e.g. 'youtube', 'youtube ios', 'youtube java'"
+            ng-model="service"
+            typeahead-template-url="template.html"
+            uib-typeahead="api as api.str for api in find($viewValue,5,'AND')" />
+    <!--
+    <input  type="text"
+            class="form-control input-lg"
+            placeholder="e.g. 'youtube', 'youtube ios', 'youtube java'"
+            ng-model="api"
+            typeahead-template-url="template.html"
+            uib-typeahead="api as api.str for api in apis | filter:$viewValue | limitTo:10"
+            >
+    -->
+  </div>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<!-- code field -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="code-box">
+      <div class="top">
+        <div class="circle red col-xs-1"></div>
+        <div class="circle green col-xs-1"></div>
+        <div class="circle blue col-xs-1"></div>
+        <div class="col-xs-9 code-box-header">
+          <span> Service: <a target="_blank" href="{{service.providerURL}}">{{service.name}}</a></span>
+        </div>
+      </div>
+      <api-parent service="service" />
+    </div>
+  </div>
 </div>
