@@ -1,0 +1,117 @@
+<api lang="info">
+  ##### Before you start
+  You need to [signup](https://www-dashboard.semantics3.com/signup?) and recieve an API key and a secret in order to query the semantics3 pull API.
+</api>
+
+<api lang="curl">
+  curl -G -H "api_key: SEM3xxxxxxxxxxxxxxxxxx" \
+      https://api.semantics3.com/test/v1/products \
+      --data-urlencode 'q={"search": "Samsung Galaxy"}'
+</api>
+<api lang="perl">
+  #To install 'perl -MCPAN -e "install Net::Semantics3"' (Github: https://github.com/Semantics3/semantics3-perl)
+  use Net::Semantics3::Products;
+  use Data::Dumper;
+
+  my $sem3 = Net::Semantics3::Products->new (
+    api_key => 'SEM3xxxxxxxxxxxxxxxxxx',
+    api_secret => 'xxxxxxxxxxxxxxxxxxxxxxxx',
+  );
+
+  $sem3->products_field( "search", "Samsung Galaxy" );
+  my $productsRef = $sem3->get_products();
+  print STDERR "Results of query:\n", Dumper( $productsRef );
+</api>
+<api lang="python">
+  #To install: 'pip install semantics3' (Github: https://github.com/Semantics3/semantics3-python)
+  from semantics3 import Products
+
+  products = Products(
+    api_key = "SEM3xxxxxxxxxxxxxxxxxxxxxx",
+    api_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  )
+
+  products.products_field( "search", "Samsung Galaxy" )
+  results = products.get_products();
+  print "Results of query:\n", results;
+</api>
+
+<api lang="php">
+  //To install: 'php composer.phar install' (Github: https://github.com/Semantics3/semantics3-php)
+  require('lib/Semantics3.php');
+
+  $key = 'SEM3xxxxxxxxxxxxxxxxxxxxxx';
+  $secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+  $requestor = new Semantics3_Products($key,$secret);
+
+  $requestor->products_field("search", "Samsung Galaxy");
+  $results = $requestor->get_products();
+  echo $results;
+</api>
+<api lang="javascript" platform="Node.js">
+  //To install: 'npm install semantics3-node' (Github: https://github.com/Semantics3/semantics3-node)
+  var api_key = 'SEM3xxxxxxxxxxxxxxxxxx';
+  var api_secret = 'xxxxxxxxxxxxxxxxxxxxxxxx';
+  var sem3 = require('semantics3-node')(api_key,api_secret);
+
+  sem3.products.products_field( "search", "Samsung Galaxy" );
+  sem3.products.get_products(
+     function(err, products) {
+        if (err) {
+           console.log("Couldn't execute query: get_products");
+           return;
+        }
+      console.log("Results of query:\n" + JSON.stringify( products ));
+     }
+  );
+</api>
+<api lang="ruby">
+  #To install: 'gem install semantics3' (Github:  https://github.com/Semantics3/semantics3-ruby)
+  require 'rubygems'
+  require 'semantics3'
+
+  API_KEY = 'SEM3xxxxxxxxxxxxxxxxxx'
+  API_SECRET = 'xxxxxxxxxxxxxxxxxxxxxxxx'
+  sem3 = Semantics3::Products.new(API_KEY,API_SECRET)
+
+  sem3.products_field( "search", "Samsung Galaxy" )
+  productsHash = sem3.get_products
+  puts "Results of query:\n",productsHash.to_json
+</api>
+<api lang="java">
+  //To include, Github: https://github.com/Semantics3/semantics3-java
+  import com.semantics3.api.Products;
+
+  Products products = new Products(
+      "SEM3xxxxxxxxxxxxxxxxxxxxxx",
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  );
+
+  products
+      .productsField( "search", "Samsung Galaxy" )
+  JSONObject results = products.getProducts();
+  System.out.println(results);
+</api>
+<api lang="c#">
+  //To include, Github: https://github.com/Semantics3/semantics3-csharp
+  using System;
+  using System.Collections.Generic;
+  using Semantics3;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Linq;
+
+  namespace MyApp
+  {
+      class Program
+      {
+          static void Main(string[] args)
+          {
+              Products products = new Products("apikey",
+                                               "apisecret");
+              products.products_field("search", "Samsung Galaxy");
+              JObject apiResponse = products.get_products();
+              Console.Write(apiResponse.ToString());
+          }
+      }
+  }
+</api>
