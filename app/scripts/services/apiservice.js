@@ -49,7 +49,7 @@ angular.module('apifyApp')
           apis: [],
           str: name,
           providerURL: (obj!==undefined?obj.url:'#'),
-          url: '/api/' + name + '.html'
+          url: 'api/' + name + '.html'
         });
       }
 
