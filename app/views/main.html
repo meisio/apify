@@ -9,19 +9,10 @@
   <div class="form-group col-xs-12 search-form">
     <input  type="text"
             class="form-control input-lg"
-            placeholder="e.g. 'youtube', 'youtube ios', 'youtube java'"
+            placeholder="e.g. 'semantics3'"
             ng-model="service"
             typeahead-template-url="template.html"
             uib-typeahead="api as api.str for api in find($viewValue,5,'AND')" />
-    <!--
-    <input  type="text"
-            class="form-control input-lg"
-            placeholder="e.g. 'youtube', 'youtube ios', 'youtube java'"
-            ng-model="api"
-            typeahead-template-url="template.html"
-            uib-typeahead="api as api.str for api in apis | filter:$viewValue | limitTo:10"
-            >
-    -->
   </div>
 </div>
 
